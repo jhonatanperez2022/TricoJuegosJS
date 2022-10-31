@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background-color: rgb(48, 48, 48);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 header {
@@ -30,9 +31,11 @@ header {
 
 /*Main*/
 
+/*Juegos pc*/
+
 
 .entrada {
-    width: 80%;
+    width: 60%;
     margin: 20px auto;
 }
 
@@ -40,13 +43,15 @@ header {
     margin: 0;
 }
 .entrada h1{
-    color: aqua;
+    background-image: linear-gradient(white, aqua);
     text-align: center;
+    font-size: 5vw;
 }
 .entrada h2{
-    font-size: 4.0vw;
+    font-size: 3.5vw;
     margin-top: 15px;
-    color: aqua;
+    text-align: center;
+    color: rgb(160, 247, 247);
 }
 .textoBienvenida {
     width: 65%;
@@ -57,36 +62,33 @@ header {
 .textoBienvenida p{
     margin: 0;
     color: rgb(230, 230, 230);
-    font-size: 3.8vw;
+    font-size: 3vw;
 }
 
 
 
 .tituloPc {
     background-color: rgb(24, 24, 24);
-    border-radius: 10px;
     width: 60%;
     margin: auto;
     display: flex;
     justify-content: center;
 }
 .tituloPc h3{
-    color: aqua;
+    color: rgb(4, 214, 214);
 }
 
 .tituloPs {
     background-color: rgb(24, 24, 24);
-    border-radius: 10px;
     width: 60%;
     margin: auto;
     display: flex;
     justify-content: center;
 }
 .tituloPs h3{
-    color: aqua;
+    color: rgb(4, 214, 214);
 }
-
-.losJuegos {
+#losJuegosPc {
     width: 75%;
     height: 15vh;
     margin: 20px auto;
@@ -94,6 +96,15 @@ header {
     grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
     gap: 11.3px;
 }
+#losJuegosPs {
+    width: 75%;
+    height: 15vh;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    gap: 11.3px;
+}
+
 .juegos {
     width: 100%;
     height: 15vh;
@@ -111,21 +122,28 @@ header {
     height: 5vh;
 }
 .juegos_texto{
-    height: 8vh;
+    height: 10vh;
     display: flex;
     text-align: center;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
+.juegos_texto p{
+    margin: 0 auto;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
 .juegos_texto a{
     text-decoration: none;
     width: 65%;
     color: rgb(240, 240, 240);
-    font-size: 2.5vw;
+    font-size: 2vw;
     padding: 2px;
     margin-bottom: 10px;
     background-color: rgb(20, 20, 20);
+    cursor: pointer;
 }
 .juegos_texto a:hover {
     background-color: aqua;
@@ -133,8 +151,129 @@ header {
     transition: .4s;
 }
 .juegos_texto h3 {
+    margin: 0 auto;
     font-size: 2.5vw;
     color: aqua;
+}
+
+/*Table carrito*/
+
+.carrito{
+    height: 8vw;
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(24, 24, 24);
+}
+.carrito h2{
+    color: rgb(4, 214, 214);
+    font-size: 3.5vw;
+}
+
+.table {
+    width: 60%;
+    margin: 25px auto;
+    background-color: rgb(88, 88, 88);
+}
+table {
+    width: 100%;
+    margin: auto;
+}
+th {
+    background-color: rgb(24, 24, 24);
+    font-size: 2vw;
+    height: 4.5vw;
+    color: rgb(4, 214, 214);
+}
+td {
+    font-size: 1.9vw;
+    color: white;
+    font-weight: bold;
+    color: black;
+}
+td:nth-child(1){
+    background-color: rgb(77, 77, 77);
+}
+td:nth-child(2){
+    background-color: rgb(66, 66, 66);
+    color: rgb(253, 253, 139);
+}
+td:nth-child(3){
+    background-color: rgb(43, 43, 43);
+    color: red;
+}
+td:nth-child(1):hover{
+    background-color: rgb(66, 66, 66);
+}
+td:nth-child(2):hover{
+    background-color: rgb(43, 43, 43);
+}
+td:nth-child(3):hover{
+    background-color: rgb(32, 32, 32);
+}
+
+tbody{
+    text-align: center;
+}
+.total{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.totalCompra {
+    height: 5vw;
+    padding: 3px;
+    background-color: rgb(24, 24, 24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.totalCompra h3{
+    color: rgb(4, 214, 214);
+    font-size: 2vw;
+}
+.spanTotal {
+    color: rgb(255, 255, 255);
+}
+.spanTotal:hover{
+    color: red;
+    transition: .3s;
+}
+.spanTotal2{
+    color: rgb(230, 230, 230);
+}
+.juegosComprados {
+    color: rgb(230, 230, 230);
+}
+.total button{
+    background-color: rgb(24, 24, 24);
+    color: rgb(4, 214, 214);
+    border: none;
+    padding: 7px;
+    font-size: 2.5vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+.total button:hover{
+    color: aqua;
+    padding: 8px;
+}
+.devolucion {
+    width: 60%;
+    margin: 50px auto 30px;
+    text-align: center;
+}
+#parrafoDevolucion{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: rgb(4, 214, 214);
+    font-size: 2.5vw;
+    margin: 0;
 }
 
 
@@ -165,10 +304,11 @@ footer {
 
     /*Main*/
     .entrada {
+        width: 40%;
         text-align: center;
     }
     .entrada h1{
-        font-size: 5vw;
+        font-size: 3vw;
     }
     .entrada h2{
         font-size: 2vw;
@@ -199,7 +339,12 @@ footer {
         margin: 0;
         font-size: 1.5vw;
     }
-    .losJuegos {
+    
+    #losJuegosPc {
+        height: 30vh;
+        margin: 50px auto;
+    }
+    #losJuegosPs {
         height: 30vh;
         margin: 50px auto;
     }
@@ -211,8 +356,11 @@ footer {
         height: 15vh;
     }
     .juegos_texto{
-        height: 15vh;
+        height: 16vh;
         align-items: center;
+    }
+    .juegos_texto p{
+        font-size: 25px;
     }
     .juegos_texto a{
         width: 65%;
@@ -222,6 +370,72 @@ footer {
     .juegos_texto h3 {
         font-size: 1.8vw;
         color: aqua;
+    }
+
+    /*Carrito table*/
+
+    .carrito{
+        height: 3vw;
+        width: 25%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(24, 24, 24);
+    }
+    .carrito h2{
+        color: rgb(4, 214, 214);
+        font-size: 1.5vw;
+    }
+    
+    .table {
+        width: 60%;
+        margin: 25px auto;
+        background-color: rgb(88, 88, 88);
+    }
+    table {
+        width: 100%;
+        margin: auto;
+    }
+    th {
+        background-color: rgb(24, 24, 24);
+        font-size: 20px;
+        height: 3vw;
+        color: rgb(4, 214, 214);
+    }
+    td {
+        font-size: 18px;
+        color: white;
+        font-weight: bold;
+    }
+    tbody{
+        text-align: center;
+    }
+    .totalCompra {
+        height: 4vw;
+        padding: 10px;
+        background-color: rgb(24, 24, 24);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .totalCompra h3{
+        color: rgb(4, 214, 214);
+        font-size: 1.2vw;
+    }
+    .total button{
+        padding: 12px;
+        font-size: 1.2vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .total button:hover{
+        color: aqua;
+        padding: 15px;
+    }
+    #parrafoDevolucion{
+        font-size: 1.5vw;
+        
     }
 
     }

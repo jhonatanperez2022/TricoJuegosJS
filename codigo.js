@@ -16,32 +16,17 @@ elijaJuego == "fifa23" || elijaJuego == "fifa 23" || elijaJuego == "fifa" || eli
 
 
 
-
 //Declaro los arrays que utilizare
 
 
-const juegosPc = [
-    {nombre: `fifa23`, precio: 150},
-    {nombre: `gta5`, precio: 150},
-    {nombre: `call of duty 4`, precio: 100},
-    {nombre: `resident evil 6`, precio: 80},
-    {nombre: `counter strike go`, precio: 120}
-];
-const juegosPs = [
-    {nombre: `the last of us`, precio: 200},
-    {nombre: `god of war`, precio: 120},
-    {nombre: `ufc 4`, precio: 150},
-    {nombre: `uncharted 4`, precio: 120},
-    {nombre: `spiderman`, precio: 100}
-];
-let carrito = []
+
 
 
 //A continuacion las dos funciones que haran el trabajo de compra tanto para PC como para PlayStation
 
 
 //Funcion PC
-
+/*
 function compradorPc(){
     let elijaJuego = prompt(`Que juego desea comprar?`);
     let precio = 0;
@@ -89,10 +74,10 @@ Otra tecla = No`))
     
     
 }
-
+*/
 
 //Funcion Play Station
-
+/*
 function compradorPs(){
     let elijaJuego = prompt(`Que juego desea comprar?`);
     let precio = 0;
@@ -140,11 +125,13 @@ Otra tecla = No`))
     
     
 }
+*/
 
 
 //Y finalmente la bienvenida a mi pagina.
 
 
+/*
 alert(`Bienvenido a TricoJuegos: Encontra tu juego, rapido y al mejor precio!`);
 
 let deseaComprar= parseInt(prompt(`Desea comprar? presione:
@@ -191,6 +178,114 @@ Hasta pronto!`);
 else if(deseaComprar === 2){
     alert(`Gracias por su visita, hasta pronto!`);
 }
+*/
+
+//Moviendo al storage mis arrays
+
+
+
+//CARRITO
+
+let carrito = []
+
+
+let juegosDivPc = document.getElementById("losJuegosPc");
+let juegosDivPs = document.getElementById("losJuegosPs");
+
+function editandoHtml(){
+    for (const juego of juegosPc){
+        juegosDivPc.innerHTML += `
+        <div class="juegos">
+            <img src="${juego.imagen}">
+            <div class="juegos_texto">
+                <h3>${juego.nombreTapa}</h3>
+                <p>${juego.precio} $</p>
+                <a id="btn${juego.id}">Comprar</a>
+            </div>
+        </div>
+        `;
+    }
+    for (const juego of juegosPs){
+        juegosDivPs.innerHTML += `
+        <div class="juegos">
+            <img src="${juego.imagen}">
+            <div class="juegos_texto">
+                <h3>${juego.nombreTapa}</h3>
+                <p>${juego.precio} $</p>
+                <a id="btn${juego.id}">Comprar</a>
+            </div>
+        </div>
+        `;
+    }
+
+
+    //EVENTOS
+
+    juegosPc.forEach(juego => {
+        document.getElementById(`btn${juego.id}`).addEventListener("click", function(){
+            agregarAlCarrito(juego);
+        })
+    })
+    juegosPs.forEach(juego => {
+        document.getElementById(`btn${juego.id}`).addEventListener("click", function(){
+            agregarAlCarrito(juego);
+        })
+    })
+    
+}
+editandoHtml();
+
+function agregarAlCarrito(juegoComprado){
+    carrito.push(juegoComprado);
+    Swal.fire({
+        position: 'top-end',
+        color: 'aqua',
+        background: 'rgb(48, 48, 48)',
+        imageAlt: juegoComprado.nombre,
+        title: juegoComprado.nombre,
+        imageUrl: juegoComprado.imagen,
+        imageWidth: 150,
+        imageHeight: 100,
+        text: 'Agregado al carrito!',
+        showConfirmButton: false,
+        timer: 850
+        })
+    console.table(carrito);
+    let tableBody = document.getElementById("tableBody")
+    tableBody.innerHTML += `
+    <tr>
+        <td>${juegoComprado.nombre}</td>
+        <td>${juegoComprado.id}</td>
+        <td>${juegoComprado.precio} $</td>
+    </tr>
+    `;
+    let sumaTotal = document.getElementById("sumaTotal");
+    const total = carrito.reduce((acc, juego)=> acc + juego.precio,0 );
+    sumaTotal.innerHTML = `Total a pagar :  <span class="spanTotal">${total} $</span>`;
+}
+
+let botonFinal = document.getElementById("botonFinalizar");
+let pDevolucion = document.getElementById("parrafoDevolucion");
+
+botonFinal.addEventListener("click", function(){
+    laDevolucion();
+})
+
+
+function laDevolucion(){
+    let carritoJuegos = carrito.map((juego) => juego.nombre);
+    const total = carrito.reduce((acc, juego)=> acc + juego.precio,0 );
+    pDevolucion.innerHTML = `COMPRA FiNALIZADA! <br> <br>
+    Juegos comprados: <br> <span class="juegosComprados">${carritoJuegos.join(" , ")}</span> <br> <br>
+    Total a pagar: <span class="spanTotal2">${total} $</span> <br> <br>
+    Si desea puede continuar agregando juegos a su carrito o finalizar pagando la suma total!`;
+    tableBody.innerHTML = `
+    `;
+    sumaTotal.innerHTML = `Total a pagar : `;
+
+}
+
+
 
 
 
