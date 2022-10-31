@@ -254,14 +254,17 @@ tbody{
     background-color: rgb(24, 24, 24);
     color: rgb(4, 214, 214);
     border: none;
-    padding: 7px;
+    font-weight: bold;
+    padding: 8px;
     font-size: 2.5vw;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     cursor: pointer;
 }
 .total button:hover{
-    color: aqua;
-    padding: 8px;
+    color: black;
+    background-color: rgb(4, 214, 214);
+    font-weight: bold;
+    transition: .5s;
 }
 .devolucion {
     width: 60%;
@@ -275,6 +278,7 @@ tbody{
     font-size: 2.5vw;
     margin: 0;
 }
+
 
 
 
@@ -425,13 +429,9 @@ footer {
         font-size: 1.2vw;
     }
     .total button{
-        padding: 12px;
         font-size: 1.2vw;
+        padding: 10px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-    .total button:hover{
-        color: aqua;
-        padding: 15px;
     }
     #parrafoDevolucion{
         font-size: 1.5vw;
