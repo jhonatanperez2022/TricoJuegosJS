@@ -14,22 +14,27 @@
       <title>Trico Juegos</title>
 </head>
 
-<body>
+<body id="elBody">
    <!-- El titulo de mi pagina-->
    <header>
       <nav>
          <div class="titulo">
-            <h1>Trico Juegos</h1>
+            <!-- <h1>Trico Juegos</h1> -->
+            <img src="./assets/iconos/iconpage.png" alt="">
          </div>
       </nav>
    </header>
 
 
    <main>
+      <!--dark o light-->
+      <div class="darkLight">
+         <button id="darkLightBoton">Light-Mode</button>
+      </div>
       <!--La presentacion-->
       <div class="textos">
          <div class="entrada">
-            <h1>Bienvenido a Trico Juegos</h1>
+            <h1>Trico Juegos</h1>
             <h2>Encontra tu juego rapido y al mejor precio!</h2>
          </div>
          <div class="textoBienvenida">
@@ -67,8 +72,10 @@
                <thead id="tableHead">
                   <tr>
                      <th>Nombre</th>
+                     <th>Unidades</th>
                      <th>ID</th>
                      <th>Precio</th>
+                     <th>X</th>
                   </tr>
                </thead>
                <tbody id="tableBody">
@@ -76,17 +83,35 @@
                </tbody>
             </table>
          </div>
+         <div class="noCompra" id="noCompraDiv">
+
+         </div>
          <div class="total">
             <div class="totalCompra">
                <h3 id="sumaTotal">Total a pagar : </h3>
+            </div>
+            <div class="vaciar-todo" >
+               <a id="vaciarTodo">Vaciar carrito</a>
             </div>
             <div>
                <button id="botonFinalizar">Finalizar compra</button>
             </div>
          </div>
          <div class="devolucion">
-            <p id="parrafoDevolucion">
-            </p>
+            <p id="parrafoDevolucion"></p>
+         </div>
+         <div class="tableDevolucion" id="manolo">
+            <table>
+               <thead id="tableHeadDev">
+                  
+               </thead>
+               <tbody id="tableBodyDev">
+               
+               </tbody>
+            </table>
+         </div>
+         <div class="total-final" id="totalFinal" >
+
          </div>
       </section>
       

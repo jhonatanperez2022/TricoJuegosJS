@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(24, 24, 24);
     height: 15vh;
     display: flex;
     align-items: center;
@@ -20,11 +20,8 @@ header {
     display: flex;
     justify-content: center;
 }
-.titulo h1 {
-    margin: 0;
-    font-size: 10vw;
-    color: rgb(25, 219, 219);
-    text-align: center;
+.titulo img{
+    width: 20vw;
 }
 
 
@@ -32,6 +29,29 @@ header {
 /*Main*/
 
 /*Juegos pc*/
+
+/*dark light*/
+
+.darkLight{
+    display: flex;
+    justify-content: end;
+    margin: 10px 20px;
+}
+.darkLight button{
+    margin: 0;
+    padding: 5px;
+    background-color: rgb(78, 255, 255);
+    box-shadow: 0px 3px 5px black;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-size: 3.5vw;
+    font-weight: 700;
+}
+.darkLight button:hover {
+    background-color: rgb(233, 233, 233);
+}
+
 
 
 .entrada {
@@ -46,6 +66,7 @@ header {
     background-image: linear-gradient(white, aqua);
     text-align: center;
     font-size: 5vw;
+    box-shadow: 0px 5px 20px rgb(15, 15, 15);
 }
 .entrada h2{
     font-size: 3.5vw;
@@ -204,6 +225,9 @@ td:nth-child(3){
     background-color: rgb(43, 43, 43);
     color: red;
 }
+td:nth-child(4){
+    background-color: rgb(32, 32, 32);
+}
 td:nth-child(1):hover{
     background-color: rgb(66, 66, 66);
 }
@@ -213,12 +237,20 @@ td:nth-child(2):hover{
 td:nth-child(3):hover{
     background-color: rgb(32, 32, 32);
 }
+td:nth-child(4):hover{
+    background-color: rgb(25, 25, 25);
+}
+
+#tableBodyDev td{
+    color: white;
+}
+
 
 tbody{
     text-align: center;
 }
 .total{
-    width: 60%;
+    width: 80%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -232,7 +264,27 @@ tbody{
     justify-content: center;
     align-items: center;
 }
-
+.vaciar-todo {
+    height: 5vw;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vaciar-todo a{
+    text-decoration: none;
+    color: rgb(4, 214, 214);
+    background-color: rgb(24, 24, 24);
+    padding: 8px;
+    font-size: 2.2vw;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.vaciar-todo a:hover{
+    color: black;
+    background-color: rgb(4, 214, 214);
+    transition: .5s;
+}
 .totalCompra h3{
     color: rgb(4, 214, 214);
     font-size: 2vw;
@@ -240,10 +292,7 @@ tbody{
 .spanTotal {
     color: rgb(255, 255, 255);
 }
-.spanTotal:hover{
-    color: red;
-    transition: .3s;
-}
+
 .spanTotal2{
     color: rgb(230, 230, 230);
 }
@@ -279,6 +328,62 @@ tbody{
     margin: 0;
 }
 
+.parrafoTableDiv{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 20px;
+}
+.parrafoTable{
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+.tablaPrecio,
+.tablaNombre{
+    color: rgb(235, 235, 235);
+}
+
+
+.tableDevolucion {
+    width: 50%;
+    margin: 10px auto;
+}
+.total-final {
+    width: 30%;
+    margin: 2px auto 10px;
+    text-align: center;
+}
+.total-final p{
+    color: rgb(4, 214, 214);
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    font-size: 3vw;
+}
+.spanTotalFinal {
+    color: white;
+    font-weight: bolder;
+}
+
+/*logo eliminar basura*/
+
+td:nth-child(5){
+    width: 15px;
+    background-color: rgb(25, 25, 25);
+}
+.eliminarCarrito {
+    width: 15px;
+    background-color: rgb(25, 25, 25);
+    display: flex;
+    justify-content: center;
+    border: none;
+}
+.eliminarCarritoImg{
+    width: 13px;
+    cursor: pointer;
+}
 
 
 
@@ -296,17 +401,193 @@ footer {
 
 
 
+
+/*L  I  G  H  T     M  O  D  E*/
+
+.lightMode {
+    background-color: rgb(220, 220, 220);
+}
+
+.lightMode header {
+    background-image: linear-gradient(rgb(49, 49, 49), rgb(131, 131, 131));
+}
+
+.lightMode .entrada h1{
+    background-image: linear-gradient(rgb(49, 49, 49), rgb(131, 131, 131));
+    color: aqua;
+}
+.lightMode .entrada h2{
+    color: black;
+    font-weight: bolder;
+}
+.lightMode .textoBienvenida p{
+    
+    color: black;
+    font-weight: 700;
+    
+}
+
+
+.lightMode .tituloPc {
+    background-image: linear-gradient(rgb(49, 49, 49), rgb(131, 131, 131));
+    
+}
+.lightMode .tituloPc h3{
+    color: aqua;
+}
+
+.lightMode .tituloPs {
+    background-image: linear-gradient(rgb(49, 49, 49), rgb(131, 131, 131));
+    
+}
+.lightMode .tituloPs h3{
+    color: aqua;
+}
+
+/*TARGETAS*/
+
+.lightMode .juegos {
+    background-color: rgb(223, 223, 223);
+    box-shadow: 0px 2px 10px  black;
+}
+.lightMode .juegos:hover {
+    box-shadow: 0px 2px 20px  black;
+    background-color: rgb(255, 255, 255);
+}
+
+.lightMode .juegos_texto p{
+    color: black;
+    font-weight: 700;
+}
+
+.lightMode .juegos_texto a{
+    background-color: rgb(71, 71, 71);
+    color: aqua;
+}
+.lightMode .juegos_texto a:hover {
+    background-color: rgb(2, 233, 233);
+    color: black;
+}
+.lightMode .juegos_texto h3 {
+    color: black;
+}
+
+
+
+/*CARRITO*/
+
+.lightMode .carrito{
+    background-image: linear-gradient(rgb(49, 49, 49), rgb(131, 131, 131));
+}
+.lightMode .carrito h2{
+    color: aqua;
+    
+}
+
+.lightMode .table {
+    background-image: linear-gradient(rgb(49, 49, 49), rgb(131, 131, 131));
+}
+
+.lightMode th {
+    background-image: linear-gradient(rgb(49, 49, 49), rgb(131, 131, 131));
+    color: aqua;
+}
+
+
+.lightMode .totalCompra {
+    background-image: linear-gradient(rgb(49, 49, 49), rgb(131, 131, 131));
+
+}
+
+.lightMode .totalCompra h3{
+    color: aqua;
+    
+}
+
+
+.lightMode .total-final p{
+    color: black;
+}
+.lightMode .spanTotalFinal {
+    color: rgb(235, 2, 2);
+}
+
+
+.lightMode .juegosComprados {
+    color: rgb(194, 3, 3);
+}
+.lightMode .total button{
+    background-color: rgb(71, 71, 71);
+    color: aqua;
+}
+.lightMode .total button:hover{
+    background-color: rgb(2, 233, 233);
+    font-weight: bolder;
+    color: black;
+    border: 1px black;
+    box-shadow: 0px 2px 5px  black;
+}
+
+.lightMode .vaciar-todo a{
+    background-color: rgb(71, 71, 71);
+    color: aqua;
+}
+.lightMode .vaciar-todo a:hover{
+    color: black;
+    background-color: rgb(2, 233, 233);
+    box-shadow: 0px 2px 5px  black;
+}
+
+
+.lightMode #parrafoDevolucion{
+    color: black;
+}
+.lightMode .spanTotal2{
+    color: red;
+}
+.lightMode footer {
+    background-color: rgb(220, 220, 220);
+}
+.lightMode .algo h5{
+    color: rgb(220, 220, 220);
+}
+
+
+
+.lightMode .darkLight button{
+    background-color: rgb(110, 109, 109);
+    color: aqua;
+}
+.lightMode .darkLight button:hover {
+    background-color: rgb(68, 68, 68);
+}
+
+
 /*Media Querie*/
 
 @media (min-width: 720px) {
     
 
     /*Header*/
-    .titulo h1 {
-        font-size: 5vw;
+    .titulo img{
+        width: 9vw;
     }
 
     /*Main*/
+
+    .darkLight{
+        display: flex;
+        justify-content: end;
+        margin: 10px 20px;
+    }
+    .darkLight button{
+        border-radius: 15px;
+        padding: 10px;
+        font-size: 1.2vw;
+    }
+    
+
+
     .entrada {
         width: 40%;
         text-align: center;
@@ -428,6 +709,23 @@ footer {
         color: rgb(4, 214, 214);
         font-size: 1.2vw;
     }
+
+
+    .total{
+        width: 60%;
+    }
+    .vaciar-todo {
+        height: 4.5vw;
+        padding: 3px;
+    }
+    .vaciar-todo a{
+        padding: 7px;
+        font-size: 1.2vw;
+    }
+
+
+
+
     .total button{
         font-size: 1.2vw;
         padding: 10px;
@@ -436,6 +734,39 @@ footer {
     #parrafoDevolucion{
         font-size: 1.5vw;
         
+    }
+
+
+    .tableDevolucion {
+        width: 40%;
+    }
+    .total-final {
+        width: 30%;
+        margin: 2px auto 10px;
+        text-align: center;
+    }
+    .total-final p{
+        color: rgb(4, 214, 214);
+        font-weight: bold;
+        margin: 50px 0 10px 0;
+        font-size: 2vw;
+    }
+    .spanTotalFinal {
+        color: white;
+        font-weight: bolder;
+    }
+
+
+
+
+    td:nth-child(4){
+        width: 35px;
+    }
+    .eliminarCarrito {
+        width: 35px;
+    }
+    .eliminarCarritoImg{
+        width: 30px;
     }
 
     }
