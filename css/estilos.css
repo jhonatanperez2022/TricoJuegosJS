@@ -352,7 +352,7 @@ tbody{
     margin: 10px auto;
 }
 .total-final {
-    width: 30%;
+    width: 40%;
     margin: 2px auto 10px;
     text-align: center;
 }
@@ -392,12 +392,24 @@ td:nth-child(5){
 /* ... */
 
 footer {
-    background-color: rgb(48, 48, 48);
+    background-color: rgb(24, 24, 24);
 }
-.algo h5{
+.algo {
+    height: 7vh;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.algo img{
+    width: 4.5vw;
+}
+
+/* .algo h5{
     margin: 0;
     color: rgb(48, 48, 48);
-}
+} */
 
 
 
@@ -546,7 +558,7 @@ footer {
     color: red;
 }
 .lightMode footer {
-    background-color: rgb(220, 220, 220);
+    background-image: linear-gradient(rgb(49, 49, 49), rgb(131, 131, 131));
 }
 .lightMode .algo h5{
     color: rgb(220, 220, 220);
@@ -769,4 +781,14 @@ footer {
         width: 30px;
     }
 
+    /*footer*/
+
+    .algo {
+        height: 12vh;
+        width: 30%;
+        justify-content: space-around;
+    }
+    .algo img{
+        width: 2vw;
+    }
     }
