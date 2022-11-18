@@ -2,19 +2,6 @@
 //BIENVENIDO A MI JAVASCRIPT
 
 
-//MINI COMPRA DE JUEGOS PC Y PLAY STATION PARA LA PRIMER ENTREGA DEL PROYECTO.
-
-
-//tags de mis juegos para implementar a futuro
-/*
-elijaJuego == "fifa23" || elijaJuego == "fifa 23" || elijaJuego == "fifa" || elijaJuego == "Fifa 23" || elijaJuego == "Fifa23" || 
-    elijaJuego == "gta5" || elijaJuego == "gta 5" || elijaJuego == "Gta5" || elijaJuego == "Gta 5" ||  
-    elijaJuego == "call of duty 4" || elijaJuego == "call of duty" || elijaJuego == "Call of duty 4" || elijaJuego == "Call of Duty" ||
-    elijaJuego == "resident evil 6" || elijaJuego == "resident evil" || elijaJuego == "Resident evil 6" || elijaJuego == "Residen evil" || 
-    elijaJuego == "counter strike go" || elijaJuego == "Counter strike go" || elijaJuego == "Counter Strike GO" || elijaJuego == "counter strike GO" || elijaJuego == "Counter strike GO")
-*/
-
-
 //CARRITO
 
 let carrito = []
@@ -110,7 +97,6 @@ function agregarAlCarrito(id){
                 showConfirmButton: false,
                 timer: 750
             })
-    console.table(carrito);
     
     dibujarCarrito();
     
@@ -120,7 +106,10 @@ function agregarAlCarrito(id){
 
 }
 
+
+
 //VACIANDO EL CARRITO
+
 let vaciarTodo = document.getElementById("vaciarTodo");
 
 vaciarTodo.addEventListener("click", () => {
@@ -278,6 +267,8 @@ function vaciarDevolucion(){
 }
 
 
+//GUARDANDO EN STORAGE
+
 function guardarStorage(){
         localStorage.setItem("carrito", JSON.stringify(carrito));
     }
@@ -321,6 +312,7 @@ botonDarkLight.addEventListener("click", () => {
 })
 
 
+// :)
 
 
 

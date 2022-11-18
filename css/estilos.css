@@ -397,7 +397,7 @@ footer {
 .algo {
     height: 7vh;
     width: 50%;
-    margin: auto;
+    margin:  30px auto auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -406,10 +406,7 @@ footer {
     width: 4.5vw;
 }
 
-/* .algo h5{
-    margin: 0;
-    color: rgb(48, 48, 48);
-} */
+
 
 
 
